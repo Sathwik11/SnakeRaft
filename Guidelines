@@ -1,0 +1,93 @@
+*********************************Instructions*********************************
+
+You need to code the logic for controlling the snake and moving it around the
+field while eating the various foods that appear on the field and increasing
+its score and length.
+
+All your logic and code goes inside the AI class.
+There is absolutely no need to know about the code within other classes.
+
+You are allowed to change and add only to AI.java class
+None of the other classes should be altered. You need to submit only the AI.java file for the competition.
+
+The run() function of the AI class will be called by the game controller to allow
+your snake controlling logic to make its move. You need to add your code inside this
+function. You can create your own functions and data members inside the class
+as you require.
+
+A set of functions inside the Game class are provided(which you can call using the game
+object provided to the AI class) which you can use to know
+the information about the current game state and playing your move.The functions provided are:
+    public char[][] getField();
+    public void moveLeft()
+    public void moveRight()
+    public void moveStraight()
+    public Snake.Velocity getsnakeDirection()
+    public boolean isFieldPositionEmpty(Point pos)
+    public Point getFoodLocation()
+    public Point getSpecialFoodLocation()
+    public Integer getSpecialFoodPoints()
+    public Point getSnakeHeadLocation()
+    public Point getSnakeTailLocation()
+
+    All the functions are properly documented for their easy use.
+    The moveLeft(),moveRight() and moveStraight() functions are the ones that actually
+    control the snake. If you call these functions multiple times within the same turn,
+    only the last call will be effective.
+    All other functions help to get the state of the playing field and information
+    about various objects present on it.
+
+
+**Important:  After the run() function of the AI class is called, your code will only be given
+        a limited amount of time of 10 ms to play its move. If it does not make any move
+        within the specified time the turn will be over and the snake will continue
+        moving in its current direction.
+Note:: All indexing is 0-based. The top left corner is considered as (0,0) with
+        x-axis running left to right and y-axis top to bottom.
+
+******************************GamePlay****************************************
+You are controlling the snake that moves about on the field. The snake needs to
+move around without colliding with the walls of the field. If such a collision occurs,
+the snake will DIE and the game will be over.
+Also the field has food on it for the snake to feed on.
+The food is of two types:
+    1)Normal food: Always present on the field. On eating it increases the score of
+       the snake by one point and the snake's length also gets increased by one.
+       If the snake eats it, instantly its length grows and another food is generated
+       somewhere else on the field.
+    2)Special food: Only sometimes present on the field( present along with the
+       normal food). On eating it affects the snake's
+       score but does not affect its length. This food has an effect of
+       (+/-)(1-5) on the score, that means it can both increase or decrease the
+       score on being eaten.The snake needs to be Careful.. ;)
+       Moreover, this food remains only for a certain time after which it disappears.
+       ( Can be both good as well as bad news for the snake ;) )
+The snake also cannot collide with itself. This also results in the snake's death.
+You need to try and score maximum points before the game gets over.
+Your score is the score present when the game gets over.
+
+************************Running instructions********************************
+Two version of the game will be provided one for running from netbeans and other
+for running from command line.
+Game.java is the main file.
+For running from command line:
+    All source files and compiled files are present inside the kodekraft folder.
+    Edit the Ai.java file.Compile it from command line.
+    Run the command : java Game
+For running on netbeans:
+    Just edit the Ai.java file and run the kodekraft project.
+
+*******************************Submission********************************
+You need to upload email your Ai.java file to KodeKraftSubmit@gmail.com along with
+your team's members' names and your technozion registration ids.
+Any queries about the game or the tasks involved can be mailed to kodekraft.tz13@gmail.com .
+Only one submission per team is allowed. 
+
+***************************Judging*******************************************
+Your code will be run by us on our machines. The code will be run for multiple
+different times. The average of the final scores of each run will be taken as the
+score of your team.
+The top 25 teams who would have the highest average scores will advance to the final
+onsite round during technozion.
+
+-----------------------------ALL THE BEST-----------------------------------------
